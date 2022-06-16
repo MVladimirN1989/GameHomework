@@ -10,12 +10,12 @@ public class AnimPlayer {
     private float time;
     private boolean loop;
 
-    public AnimPlayer(String name, int widht, int height, float fps,Animation.PlayMode mode) {
+    public AnimPlayer(String name, int width, int height, float fps,Animation.PlayMode mode) {
         this.loop=loop;
         texture=new Texture(name);
         TextureRegion region=new TextureRegion(texture);
-        TextureRegion[][]regions=region.split(region.getRegionWidth()/widht, region.getRegionHeight()/height);
-        TextureRegion[]regions1=new TextureRegion[widht*height];
+        TextureRegion[][]regions=region.split(region.getRegionWidth()/width, region.getRegionHeight()/height);
+        TextureRegion[]regions1=new TextureRegion[width*height];
 
         int cnt=0;
         for (int i = 0; i < regions.length; i++) {
